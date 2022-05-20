@@ -19,6 +19,10 @@ abstract class Player {
 
     public abstract void play(String number) throws Exception;
 
+    public void addFightList(String number) {
+        fightList.add(number);
+    }
+
     public Boolean getIsEnd() {
         return isEnd;
     }
@@ -36,10 +40,13 @@ abstract class Player {
     }
 
     public void printFightList() {
-        System.out.println("ATeam");
-        //System.out.println("Strike : " + strike + ", Ball :" + ball + ", Out: " + out);
+        System.out.println(name);
         System.out.println("----------------------------------------");
-        System.out.println("Bteam");
+        int i = 1;
+        for (String fight : fightList) {
+            System.out.println(i + " : " + fight);
+            i++;
+        }
         System.out.println("----------------------------------------");
     }
 }
@@ -83,6 +90,8 @@ class PlayerATeam extends Player {
         } else {
             System.out.println("Strike : " + strike + ", Ball :" + ball + ", Out: " + out);
         }
+
+        super.addFightList(number + ": Strike : " + strike + ", Ball :" + ball + ", Out: " + out);
     }
 }
 
@@ -125,6 +134,7 @@ class PlayerBTeam extends Player {
         } else {
             System.out.println("Strike : " + strike + ", Ball :" + ball + ", Out: " + out);
         }
+        super.addFightList(number + ": Strike : " + strike + ", Ball :" + ball + ", Out: " + out);
     }
 }
 
