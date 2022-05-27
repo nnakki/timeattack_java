@@ -57,7 +57,7 @@ class Minesweeper {
         int END_Y = y + 1;
         if (END_Y > 9) END_Y = 9;
 
-        if (map[y][x] == 1) {
+        if (map[x][y] == 1) {
             return -1;
         } else {
             for (int i = START_X; i <= END_X; i++) {
