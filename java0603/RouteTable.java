@@ -5,7 +5,7 @@ import java.util.List;
 
 public class RouteTable {
 
-    int id;
+    private int id;
     GateWay gateWay;
     List<Subnet> subnetList = new ArrayList<>();
 

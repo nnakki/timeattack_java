@@ -2,7 +2,7 @@ package java0603;
 
 public class NatGateWay extends GateWay {
     private int id;
-    Subnet subnet;
+    private Subnet subnet;
 
     public NatGateWay(Subnet subnet) {
         this.subnet = subnet;
